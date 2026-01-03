@@ -13,7 +13,8 @@
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "prepublishOnly": "npm run build",
-    "postbuild": "node -e \"if(process.platform!=='win32'){require('fs').chmodSync('dist/index.js',0o755)}\""
+    "postbuild": "node -e \"if(process.platform!=='win32'){require('fs').chmodSync('dist/index.js',0o755)}\"",
+    "postinstall": "npm run build"
   },
   "files": [
     "dist",
